@@ -20,3 +20,12 @@ file=open("ref.txt","r")
 for x in file:
     print(x)
 file.close
+
+f1=open("main.txt","r")
+f2=open("py.txt","w")
+
+for line in f1.readlines():
+    if not(line.startswith('Coding')):
+        f2.write(line)
+f1.close()
+f2.close()
