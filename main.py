@@ -29,3 +29,20 @@ for line in f1.readlines():
         f2.write(line)
 f1.close()
 f2.close()
+
+b1 = open("main.txt","r")
+b2 = open("ref.txt","w")
+
+cont = b1.readlines()
+type(cont)
+for i in range(1,len(cont)+1):
+    if(i % 2 !=0):
+        b2.write(cont[i-1])
+    else:
+        pass
+b2.close()
+b2 = open("ref.txt","r")
+cont1 = b2.read()
+print(cont1)
+b1.close()
+b2.close()
